@@ -1,7 +1,14 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
+
 WORKDIR /app
-RUN apt-get update && apt-get install -y --no-install-recommends tesseract-ocr && rm -rf /var/lib/apt/lists/*
+
+ENV OMP_NUM_THREADS=1
+
 RUN pip install --no-cache-dir pytesseract Pillow
-COPY livetv.py .
+
+COPY livetv.so .
+COPY run.py .
+
 EXPOSE 7860
-CMD ["python", "livetv.py"]
+
+CMD ["python", "run.py"]
