@@ -6,8 +6,8 @@ ENV OMP_NUM_THREADS=1
 
 RUN pip install --no-cache-dir pytesseract Pillow
 
-COPY livetv.so .
-COPY run.py .
+COPY livetvarm.so .
+COPY runarm.py .
 
 EXPOSE 7860
 
