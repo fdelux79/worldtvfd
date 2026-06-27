@@ -18,7 +18,7 @@ docker build -f Dockerfilearm -t livetv-arm .
 docker run -d --name livetv --restart unless-stopped -p 8042:8042 -e PROXY_PORT=8042 livetv-arm
 ```
 
-> La porta si cambia con la variabile d'ambiente `PORT` (es. `-e PROXY_PORT=8080`, e mappa `-p 8080:8080`).
+> La porta si cambia con la variabile d'ambiente `PROXY_PORT` (es. `-e PROXY_PORT=8080`, e mappa `-p 8080:8080`).
 
 ## Su Hugging Face Spaces
 
