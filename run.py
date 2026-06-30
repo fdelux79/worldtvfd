@@ -7,8 +7,8 @@ import os
 import threading
 
 def auto_restart():
-    # Attende 120 secondi (2 minuti) prima di forzare il riavvio
-    time.sleep(120)
+    # Attende 200 secondi (3 minuti) prima di forzare il riavvio
+    time.sleep(200)
     print("Riavvio programmato per rigenerazione token...")
     # Chiude il processo. Render lo riavvierà istantaneamente da solo.
     os._exit(0)
